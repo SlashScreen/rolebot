@@ -3,7 +3,7 @@ Dice = require('lovedice')
 client = discordia.Client()
 angrydie = Dice.newDie(3)
 burndie = Dice.newDie(2)
-kibdie = Dice.newDie(2)
+kibdie = Dice.newDie(3)
 alicedie = Dice.newDie(42)
 jacklyndie = Dice.newDie(18)
 andredie = Dice.newDie(20)
@@ -146,13 +146,15 @@ client:on('messageCreate', function(message)
 		end
 		
 		if text == "!kib" then
-		
 			roll = kibdie:roll()
 			
 			if roll == 1 then
 				message.channel:send(message.author.mentionString .. "https://cdn.discordapp.com/attachments/431822989923844108/435207631456567306/NeenonVogueCoverv1.png")
 			elseif roll == 2 then
 				message.channel:send(message.author.mentionString .. "https://cdn.discordapp.com/attachments/431822989923844108/435205675904401418/neenonrtest.gif")
+			elseif roll == 3 then
+				message.channel:send(message.author.mentionString .. "https://cdn.discordapp.com/attachments/431825066016112669/435988313850118144/draw_me_like_one_of_your_french_kibs.png
+")
 			end
 			return true
 		end
@@ -167,7 +169,7 @@ client:on('messageCreate', function(message)
 			return true
 		end
 		
-		if text == "!aaa" or  text == "!aaaa" or text == "!aaaaa" or text == "!aa" or text == "!aaaaaa"  then
+		if text == "!aaa" or  text == "!aaaa" or text == "!aaaaa" or text == "!aa" or text == "!aaaaaa" or text == "!a"  then
 			message.channel:send(message.author.mentionString .. " https://imgur.com/a/a8QzN")
 			return true
 		end
